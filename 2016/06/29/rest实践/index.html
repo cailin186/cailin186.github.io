@@ -29,7 +29,7 @@ API就是程序员的UI，和其他UI一样，你必须仔细考虑它的用户�
 
 2.参数采用json进行传输（post）
 服务端直接接收到该参数后，反序列化，不会像现在ja">
-<meta property="og:updated_time" content="2016-06-29T01:24:02.998Z">
+<meta property="og:updated_time" content="2016-06-29T01:26:56.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="REST规范(适合于我们自己的)">
 <meta name="twitter:description" content="一.REST规范(适合于我们自己的)1.KISS
@@ -145,7 +145,7 @@ API就是程序员的UI，和其他UI一样，你必须仔细考虑它的用户�
 <p>7.对接口过滤、排序</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">GET /goods?sort=-updated_at - 返回最新更新的商品</div><div class="line">GET /goods?state=closed&amp;sort=-updated_at - 返回状态为close的最新的商品</div><div class="line">GET /goods?q=return&amp;state=open&amp;sort=-priority,created_at - 返回优先级高的、状态为open的商品 </div><div class="line">GET https://api.fakecompany.com/v1/restaurants?sort=rating,reviews,name&amp;amp;desc=rating,reviews</div><div class="line">GET /cars?sort=-manufactorer,+model</div><div class="line">-manufactorer 降序</div><div class="line">+model model 升序</div></pre></td></tr></table></figure>
 <p>8.限制返回的字段<br>GET /ticketsfields=id,subject,customer_name,updated_at&amp;state=open&amp;sort=-updated_at</p>
-<p>9.分页及列表<br>==所有的列表接口都要支持 page_no和page_size 过滤 ==<br><a href="http://172.16.0.71:8081/talkplatform_course_consumer/course_class/query_class_list?course_type=15&amp;page_no=2&amp;page_size=1" target="_blank" rel="external">http://172.16.0.71:8081/talkplatform_course_consumer/course_class/query_class_list?course_type=15&amp;page_no=2&amp;page_size=1</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">&quot;res&quot;: [</div><div class="line">&#123;</div><div class="line">&quot;fact_capacity&quot;: 0,</div><div class="line">&quot;tea_id&quot;: 3500736,</div><div class="line">&quot;status&quot;: 1,</div><div class="line">&quot;next_lesson_book_id&quot;: 441053,</div><div class="line">&quot;class_name&quot;: &quot;英文儿歌唱唱唱&quot;,</div><div class="line">&quot;class_id&quot;: &quot;30108357&quot;,</div><div class="line">&quot;assist_tea_ids&quot;: &quot;&quot;,</div><div class="line">&quot;total_num&quot;: 20,</div><div class="line">&quot;end_time&quot;: &quot;2016-08-11 23:59:59&quot;,</div><div class="line">&quot;capacity&quot;: 100,</div><div class="line">&quot;start_time&quot;: &quot;2016-07-15 00:00:00&quot;,</div><div class="line">&quot;test_lesson&quot;: &quot;&quot;,</div><div class="line">&quot;course_id&quot;: 30108347,</div><div class="line">&quot;assist_tea_qq&quot;: &quot;187568208&quot;,</div><div class="line">&quot;lesson_num&quot;: 0,</div><div class="line">&quot;course_type&quot;: 15,</div><div class="line">&quot;complete_num&quot;: 0</div><div class="line">&#125;</div><div class="line">],</div><div class="line">&quot;message&quot;: &quot;success&quot;,</div><div class="line">&quot;code&quot;: &quot;10000&quot;,</div><div class="line">&quot;total&quot;: &quot;52&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>9.分页及列表<br>==所有的列表接口都要支持 page_no和page_size 过滤 ==<br><a href="http://xxxxx/talkplatform_course_consumer/course_class/query_class_list?course_type=15&amp;page_no=2&amp;page_size=1" target="_blank" rel="external">http://xxxxx/talkplatform_course_consumer/course_class/query_class_list?course_type=15&amp;page_no=2&amp;page_size=1</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">&quot;res&quot;: [</div><div class="line">&#123;</div><div class="line">&quot;fact_capacity&quot;: 0,</div><div class="line">&quot;tea_id&quot;: 3500736,</div><div class="line">&quot;status&quot;: 1,</div><div class="line">&quot;next_lesson_book_id&quot;: 441053,</div><div class="line">&quot;class_name&quot;: &quot;英文儿歌唱唱唱&quot;,</div><div class="line">&quot;class_id&quot;: &quot;30108357&quot;,</div><div class="line">&quot;assist_tea_ids&quot;: &quot;&quot;,</div><div class="line">&quot;total_num&quot;: 20,</div><div class="line">&quot;end_time&quot;: &quot;2016-08-11 23:59:59&quot;,</div><div class="line">&quot;capacity&quot;: 100,</div><div class="line">&quot;start_time&quot;: &quot;2016-07-15 00:00:00&quot;,</div><div class="line">&quot;test_lesson&quot;: &quot;&quot;,</div><div class="line">&quot;course_id&quot;: 30108347,</div><div class="line">&quot;assist_tea_qq&quot;: &quot;187568208&quot;,</div><div class="line">&quot;lesson_num&quot;: 0,</div><div class="line">&quot;course_type&quot;: 15,</div><div class="line">&quot;complete_num&quot;: 0</div><div class="line">&#125;</div><div class="line">],</div><div class="line">&quot;message&quot;: &quot;success&quot;,</div><div class="line">&quot;code&quot;: &quot;10000&quot;,</div><div class="line">&quot;total&quot;: &quot;52&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>==10.状态不要用数字==</p>
 <p>因为用数字非常容易记混，1.2.3.4谁知道是什么意思呢？如果是英文表述出来，就非常容易读懂了。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">bad</div><div class="line">status=1</div><div class="line">good</div><div class="line">status=on</div></pre></td></tr></table></figure>
@@ -177,7 +177,7 @@ API就是程序员的UI，和其他UI一样，你必须仔细考虑它的用户�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/29/rest实践/" data-id="ciq06pd460001zcrd6smbz1zu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/29/rest实践/" data-id="ciq07cen10001z4rdrfd0301h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -186,11 +186,11 @@ API就是程序员的UI，和其他UI一样，你必须仔细考虑它的用户�
     
 <nav id="article-nav">
   
-    <a href="/2016/06/29/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/06/29/openAPI 之什么是rest/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Hello World
+          什么是rest
         
       </div>
     </a>
@@ -238,10 +238,6 @@ API就是程序员的UI，和其他UI一样，你必须仔细考虑它的用户�
         
           <li>
             <a href="/2016/06/29/openAPI 之什么是rest/">什么是rest</a>
-          </li>
-        
-          <li>
-            <a href="/2016/06/29/hello-world/">Hello World</a>
           </li>
         
           <li>
