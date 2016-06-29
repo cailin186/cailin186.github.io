@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>什么是rest | 翻过这座山就到菩提洞了</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.什么是RESTresource Representational State Transfer严格上来讲应该是资源表现层状态转移，他是一种架构的风格基于web标准的HTTP协议
+来源是Roy Thomas Fielding在他2000年的博士论文中提出的Fielding是一个非常重要的人，他是HTTP协议（1.0版和1.1版）的主要设计者、Apache服务器软件的作者之一、Apache基金会的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是rest">
+<meta property="og:url" content="http://yoursite.com/2016/06/29/openAPI 之什么是rest/index.html">
+<meta property="og:site_name" content="翻过这座山就到菩提洞了">
+<meta property="og:description" content="1.什么是RESTresource Representational State Transfer严格上来讲应该是资源表现层状态转移，他是一种架构的风格基于web标准的HTTP协议
+来源是Roy Thomas Fielding在他2000年的博士论文中提出的Fielding是一个非常重要的人，他是HTTP协议（1.0版和1.1版）的主要设计者、Apache服务器软件的作者之一、Apache基金会的">
+<meta property="og:updated_time" content="2016-06-29T01:23:20.792Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="什么是rest">
+<meta name="twitter:description" content="1.什么是RESTresource Representational State Transfer严格上来讲应该是资源表现层状态转移，他是一种架构的风格基于web标准的HTTP协议
+来源是Roy Thomas Fielding在他2000年的博士论文中提出的Fielding是一个非常重要的人，他是HTTP协议（1.0版和1.1版）的主要设计者、Apache服务器软件的作者之一、Apache基金会的">
+  
+    <link rel="alternate" href="/atom.xml" title="翻过这座山就到菩提洞了" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">翻过这座山就到菩提洞了</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-openAPI 之什么是rest" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/29/openAPI 之什么是rest/" class="article-date">
+  <time datetime="2016-06-29T01:11:34.927Z" itemprop="datePublished">2016-06-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/rest/">rest</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      什么是rest
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-什么是REST"><a href="#1-什么是REST" class="headerlink" title="1.什么是REST"></a>1.什么是REST</h1><p>resource Representational State Transfer<br>严格上来讲应该是资源表现层状态转移，他是一种架构的风格<br>基于web标准的HTTP协议</p>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><p>是Roy Thomas Fielding在他2000年的博士论文中提出的<br>Fielding是一个非常重要的人，他是HTTP协议（1.0版和1.1版）的主要设计者、Apache服务器软件的作者之一、Apache基金会的第一任主席。所以，他的这篇论文一经发表，就引起了关注，并且立即对互联网开发产生了深远的影响。</p>
+<h1 id="5个关键词"><a href="#5个关键词" class="headerlink" title="5个关键词"></a>5个关键词</h1><ul>
+<li>资源（Resource）</li>
+<li>资源的表述（Representation）</li>
+<li>状态转移（State Transfer）</li>
+<li>统一接口（Uniform Interface）</li>
+<li>超文本驱动（Hypertext Driven）</li>
+</ul>
+<p>简单来讲就是下面的一句话 </p>
+<h5 id="通过-URL定位资源，用HTTP动词（GET-POST-DELETE-PUT）描述操作"><a href="#通过-URL定位资源，用HTTP动词（GET-POST-DELETE-PUT）描述操作" class="headerlink" title="通过 URL定位资源，用HTTP动词（GET,POST,DELETE,PUT）描述操作"></a>通过 URL定位资源，用HTTP动词（GET,POST,DELETE,PUT）描述操作</h5><h1 id="误区"><a href="#误区" class="headerlink" title="误区"></a>误区</h1><ul>
+<li>最常见的一种设计错误，就是URI包含动词</li>
+<li>版本号加在URL中（这个很多公司都是将版本号加在url中，因为这样更直观，在标准的rest架构中是将版本号加在头文件中的）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Accept: application/vnd.github.v3+json</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="一句话描述"><a href="#一句话描述" class="headerlink" title="一句话描述"></a>一句话描述</h1><ul>
+<li>资源：REST 架构把所有内容都视为资源</li>
+<li>资源的表述：REST架构中的资源有多种表现形式，例如HTML/XML/JSON/jpg(amazons3)/mp4</li>
+<li>状态转移：通过http post\get\put\delete\option\head等方法来操作资源的状态</li>
+<li>统一接口：通过一个URL实现资源的增删改查操作</li>
+<li>超文本驱动：通过超媒体中的link来转移资源</li>
+<li>参考<br><a href="https://developer.paypal.com/docs/api/" target="_blank" rel="external">https://developer.paypal.com/docs/api/</a><br><a href="https://developer.github.com/v3/" target="_blank" rel="external">https://developer.github.com/v3/</a></li>
+</ul>
+<h1 id="权限验证"><a href="#权限验证" class="headerlink" title="权限验证"></a>权限验证</h1><ul>
+<li><p>Basic Authentication</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -u &quot;username&quot; https://api.github.com</div></pre></td></tr></table></figure>
+</li>
+<li><p>OAuth2 Token (sent in a header)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -H &quot;Authorization: token OAUTH-TOKEN&quot; https://api.github.com</div></pre></td></tr></table></figure>
+</li>
+<li><p>OAuth2 Token (sent as a parameter)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://api.github.com/?access_token=OAUTH-TOKEN</div></pre></td></tr></table></figure>
+</li>
+<li><p>OAuth2 Key/Secret</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl &apos;https://api.github.com/users/whatever?client_id=xxxx&amp;client_secret=yyyy&apos;</div></pre></td></tr></table></figure>
+<ul>
+<li>Failed login limit</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">curl -i https://api.github.com -u foo:bar</div><div class="line">HTTP/1.1 401 Unauthorized</div><div class="line"></div><div class="line">&#123;</div><div class="line">  &quot;message&quot;: &quot;Bad credentials&quot;,</div><div class="line">  &quot;documentation_url&quot;: &quot;https://developer.github.com/v3&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/29/openAPI 之什么是rest/" data-id="ciq06sq2j0000acrdigl4kgbw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/06/29/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/rest/">rest</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/06/29/openAPI 之什么是rest/">什么是rest</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/29/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/29/rest实践/">REST规范(适合于我们自己的)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 蔡林<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

@@ -3,14 +3,45 @@
 <head>
   <meta charset="utf-8">
   
-  <title>翻过这座山就到菩提洞了</title>
+  <title>REST规范(适合于我们自己的) | 翻过这座山就到菩提洞了</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="翻过这座山就到菩提洞了">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="一.REST规范(适合于我们自己的)1.KISS
+
+简单、易读，通过接口名字就知道是什么意思
+API应该对程序员友好，并且在浏览器地址栏容易输入。
+API应该简单，直观，容易使用的同时优雅。
+API应该具有足够的灵活性来支持上层ui。
+API就是程序员的UI，和其他UI一样，你必须仔细考虑它的用户体验！
+
+2.参数采用json进行传输（post）
+服务端直接接收到该参数后，反序列化，不会像现在ja">
+<meta property="og:type" content="article">
+<meta property="og:title" content="REST规范(适合于我们自己的)">
+<meta property="og:url" content="http://yoursite.com/2016/06/29/rest实践/index.html">
 <meta property="og:site_name" content="翻过这座山就到菩提洞了">
+<meta property="og:description" content="一.REST规范(适合于我们自己的)1.KISS
+
+简单、易读，通过接口名字就知道是什么意思
+API应该对程序员友好，并且在浏览器地址栏容易输入。
+API应该简单，直观，容易使用的同时优雅。
+API应该具有足够的灵活性来支持上层ui。
+API就是程序员的UI，和其他UI一样，你必须仔细考虑它的用户体验！
+
+2.参数采用json进行传输（post）
+服务端直接接收到该参数后，反序列化，不会像现在ja">
+<meta property="og:updated_time" content="2016-06-29T01:24:02.998Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="翻过这座山就到菩提洞了">
+<meta name="twitter:title" content="REST规范(适合于我们自己的)">
+<meta name="twitter:description" content="一.REST规范(适合于我们自己的)1.KISS
+
+简单、易读，通过接口名字就知道是什么意思
+API应该对程序员友好，并且在浏览器地址栏容易输入。
+API应该简单，直观，容易使用的同时优雅。
+API应该具有足够的灵活性来支持上层ui。
+API就是程序员的UI，和其他UI一样，你必须仔细考虑它的用户体验！
+
+2.参数采用json进行传输（post）
+服务端直接接收到该参数后，反序列化，不会像现在ja">
   
     <link rel="alternate" href="/atom.xml" title="翻过这座山就到菩提洞了" type="application/atom+xml">
   
@@ -59,135 +90,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-openAPI 之什么是rest" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/06/29/openAPI 之什么是rest/" class="article-date">
-  <time datetime="2016-06-29T01:11:34.927Z" itemprop="datePublished">2016-06-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/rest/">rest</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/29/openAPI 之什么是rest/">什么是rest</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="1-什么是REST"><a href="#1-什么是REST" class="headerlink" title="1.什么是REST"></a>1.什么是REST</h1><p>resource Representational State Transfer<br>严格上来讲应该是资源表现层状态转移，他是一种架构的风格<br>基于web标准的HTTP协议</p>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><p>是Roy Thomas Fielding在他2000年的博士论文中提出的<br>Fielding是一个非常重要的人，他是HTTP协议（1.0版和1.1版）的主要设计者、Apache服务器软件的作者之一、Apache基金会的第一任主席。所以，他的这篇论文一经发表，就引起了关注，并且立即对互联网开发产生了深远的影响。</p>
-<h1 id="5个关键词"><a href="#5个关键词" class="headerlink" title="5个关键词"></a>5个关键词</h1><ul>
-<li>资源（Resource）</li>
-<li>资源的表述（Representation）</li>
-<li>状态转移（State Transfer）</li>
-<li>统一接口（Uniform Interface）</li>
-<li>超文本驱动（Hypertext Driven）</li>
-</ul>
-<p>简单来讲就是下面的一句话 </p>
-<h5 id="通过-URL定位资源，用HTTP动词（GET-POST-DELETE-PUT）描述操作"><a href="#通过-URL定位资源，用HTTP动词（GET-POST-DELETE-PUT）描述操作" class="headerlink" title="通过 URL定位资源，用HTTP动词（GET,POST,DELETE,PUT）描述操作"></a>通过 URL定位资源，用HTTP动词（GET,POST,DELETE,PUT）描述操作</h5><h1 id="误区"><a href="#误区" class="headerlink" title="误区"></a>误区</h1><ul>
-<li>最常见的一种设计错误，就是URI包含动词</li>
-<li>版本号加在URL中（这个很多公司都是将版本号加在url中，因为这样更直观，在标准的rest架构中是将版本号加在头文件中的）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Accept: application/vnd.github.v3+json</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="一句话描述"><a href="#一句话描述" class="headerlink" title="一句话描述"></a>一句话描述</h1><ul>
-<li>资源：REST 架构把所有内容都视为资源</li>
-<li>资源的表述：REST架构中的资源有多种表现形式，例如HTML/XML/JSON/jpg(amazons3)/mp4</li>
-<li>状态转移：通过http post\get\put\delete\option\head等方法来操作资源的状态</li>
-<li>统一接口：通过一个URL实现资源的增删改查操作</li>
-<li>超文本驱动：通过超媒体中的link来转移资源</li>
-<li>参考<br><a href="https://developer.paypal.com/docs/api/" target="_blank" rel="external">https://developer.paypal.com/docs/api/</a><br><a href="https://developer.github.com/v3/" target="_blank" rel="external">https://developer.github.com/v3/</a></li>
-</ul>
-<h1 id="权限验证"><a href="#权限验证" class="headerlink" title="权限验证"></a>权限验证</h1><ul>
-<li><p>Basic Authentication</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -u &quot;username&quot; https://api.github.com</div></pre></td></tr></table></figure>
-</li>
-<li><p>OAuth2 Token (sent in a header)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -H &quot;Authorization: token OAUTH-TOKEN&quot; https://api.github.com</div></pre></td></tr></table></figure>
-</li>
-<li><p>OAuth2 Token (sent as a parameter)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://api.github.com/?access_token=OAUTH-TOKEN</div></pre></td></tr></table></figure>
-</li>
-<li><p>OAuth2 Key/Secret</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl &apos;https://api.github.com/users/whatever?client_id=xxxx&amp;client_secret=yyyy&apos;</div></pre></td></tr></table></figure>
-<ul>
-<li>Failed login limit</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">curl -i https://api.github.com -u foo:bar</div><div class="line">HTTP/1.1 401 Unauthorized</div><div class="line"></div><div class="line">&#123;</div><div class="line">  &quot;message&quot;: &quot;Bad credentials&quot;,</div><div class="line">  &quot;documentation_url&quot;: &quot;https://developer.github.com/v3&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/29/openAPI 之什么是rest/" data-id="ciq06sq2j0000acrdigl4kgbw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/06/29/hello-world/" class="article-date">
-  <time datetime="2016-06-29T00:57:57.043Z" itemprop="datePublished">2016-06-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/29/hello-world/" data-id="ciq06pd3k0000zcrdehmy8f7f" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-rest实践" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-rest实践" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/06/29/rest实践/" class="article-date">
   <time datetime="2016-06-28T16:00:00.000Z" itemprop="datePublished">2016-06-29</time>
@@ -204,8 +107,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/29/rest实践/">REST规范(适合于我们自己的)</a>
+    <h1 class="article-title" itemprop="name">
+      REST规范(适合于我们自己的)
     </h1>
   
 
@@ -280,10 +183,23 @@
     </footer>
   </div>
   
-</article>
-
+    
+<nav id="article-nav">
+  
+    <a href="/2016/06/29/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
+</article>
 
 </section>
         
